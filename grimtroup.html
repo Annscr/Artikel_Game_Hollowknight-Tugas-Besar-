@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLC Page</title>
+
+<style>
+    .top-logo {
+    position: absolute;
+    bottom: -5px;
+    right: 25px;     
+    z-index: 5;
+    }
+
+    .top-logo img {
+    width: 110px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    }
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-image: url('bahan/grimtroupe_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    }
+
+    body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+    }
+
+    section {
+        width: 90%;
+        max-width: 1100px;
+        margin: 40px auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .game-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .game-img-cell {
+        width: 40%;
+        padding-right: 10px;
+    }
+    .game-desc-cell {
+        width: 60%;
+        padding-left: 10px;
+    }
+
+    .game-img {
+        width: 85%;
+        border-radius: 12px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    a {
+        color: #94b9ff;
+    }
+
+            .music-toggle {
+    text-decoration: underline;
+    cursor: pointer;
+    color: e5e5e5;
+    font-size: 16px;
+}
+</style>
+
+</head>
+<body>
+
+<section>
+    <h2>DLC GRIMTROUPE</h2>
+
+        <div style="margin-top: 20px; text-align: center;">
+        <span class="music-toggle" onclick="toggleMusic()">▶ Soundtrack</span>
+        <audio id="bgMusic">
+            <source src="bahan/musik/Grimm.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <table class="game-table">
+        <tr>
+            <td class="game-img-cell">
+                <img src="bahan/grimtroupe.jpg" alt="Poster DLC" class="game-img">
+            </td>
+<td class="game-desc-cell">
+  <h3>Ritual Merah yang Misterius</h3>
+
+  <p>
+    <strong>Grim Troupe</strong> memperkenalkan kelompok pengembara gelap yang tiba-tiba muncul di Hallownest, membawa aura merah  
+    dan ritual kuno yang harus diselesaikan oleh Sang Ksatria. Dengan memanggil mereka melalui lentera khusus, Anda akan terlibat
+    dalam rangkaian tugas yang penuh teka-teki dan atmosfer gothic.
+  </p>
+
+  <p>
+    DLC ini menghadirkan pertarungan bos baru seperti <em>Troupe Master Grimm</em> dan versi paling sulitnya,
+    <strong>Nightmare King Grimm</strong>, salah satu pertarungan tersulit dalam Hollow Knight. Selain itu, pemain bisa memilih
+    dua jalur cerita berbeda: membantu Troupe atau memadamkan ritual mereka.
+  </p>
+
+  <ul>
+    <li>Bertemu karakter-karakter baru penuh misteri</li>
+    <li>Pertarungan klimaks melawan Grimm & Nightmare King Grimm</li>
+    <li>Questline bercabang dengan dua ending berbeda</li>
+  </ul>
+
+  <p><em>Tip:</em> Pilih jalur dengan bijak—kedua pilihan memberikan hadiah dan konsekuensi berbeda.</p>
+</td>
+
+
+        </tr>
+    </table>
+</section>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const text = document.querySelector(".music-toggle");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            text.textContent = "⏸ Soundtrack";
+        } else {
+            music.pause();
+            text.textContent = " ▶ Soundtrack";
+        }
+    }
+
+</script>
+
+<a href="laman_utama.html" class="top-logo">
+        <img src="bahan/back.png" alt="Hollow Knight Logo">
+    </a>
+
+</body>
+</html>

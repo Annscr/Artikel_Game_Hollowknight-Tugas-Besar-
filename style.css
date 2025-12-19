@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a0a0f;
+  color: #e5e5e5;
+  overflow-x: hidden;
+}
+header {
+  background: url('bahan/Atmos_snippet.gif') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.top-logo {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 5;
+}
+
+.top-logo img {
+  width: 110px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.title-img {
+  width: 1100px;
+  max-width: 80%;
+  animation: fadeIn 2s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-nav {
+  background: #0d0d12;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main-nav a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.music-btn {
+  background: none;
+  border: none;
+  color: #e5e5e5;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.music-btn:hover {
+  text-decoration: underline;
+}
+
+
+section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.game-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 24px 20px;
+  table-layout: fixed;
+}
+
+.game-img-cell {
+  width: 40%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.game-desc-cell {
+  width: 60%;
+  vertical-align: top;
+  padding: 0 15px;
+}
+
+.game-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.game-img:hover {
+  transform: scale(1.03);
+}
+
+.game-desc-cell h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #f3f3f3;
+}
+
+.video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.gameplay-video {
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.dlc-section {
+  max-width: 1000px;
+  margin: 30px auto 10px;
+  padding: 0 20px;
+}
+
+.dlc-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-bottom: 28px;
+}
+
+.dlc-cell {
+  width: 33.3333%;
+  padding: 18px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.dlc-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.dlc-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  background: rgba(11, 11, 11, 0.06);
+}
+
+.dlc-title {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.dlc-thumb {
+  width: 180px;
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.dlc-caption {
+  font-size: 0.95rem;
+  color: #d9d9d9;
+  margin-top: 6px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.7;
+  letter-spacing: 0.4px;
+  margin-bottom: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  margin-top: 60px;
+  background: #09090d;
+  color: #999;
+}
+
+#comment-section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#commentForm input,
+#commentForm textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+#commentForm button {
+  width: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #444;
+  color: white;
+  cursor: pointer;
+}
+
+#commentForm button:hover {
+  background: #666;
+}
+
+.comment-item {
+  background: #111;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+#toTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  display: none;
+}

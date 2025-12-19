@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLC Page</title>
+
+<style>
+    .top-logo {
+    position: absolute;
+    bottom: 5px;
+    right: 25px;     
+    z-index: 5;
+    }
+
+    .top-logo img {
+    width: 110px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    }
+    
+    body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-image: url('bahan/dream_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    }
+    body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+    }
+
+    section {
+        width: 90%;
+        max-width: 1100px;
+        margin: 40px auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .game-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .game-img-cell {
+        width: 40%;
+        padding-right: 10px;
+    }
+    .game-desc-cell {
+        width: 60%;
+        padding-left: 10px;
+    }
+
+    .game-img {
+        width: 85%;
+        border-radius: 12px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    a {
+        color: #94b9ff;
+    }
+
+    .music-toggle {
+    text-decoration: underline;
+    cursor: pointer;
+    color: e5e5e5;
+    font-size: 16px;
+}
+
+</style>
+
+</head>
+<body>
+
+<section>
+    <h2>DLC DREAM</h2>
+
+    <div style="margin-top: 20px; text-align: center;">
+        <span class="music-toggle" onclick="toggleMusic()">▶ Soundtrack</span>
+        <audio id="bgMusic">
+            <source src="bahan/musik/utama.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+
+    <table class="game-table">
+        <tr>
+            <td class="game-img-cell">
+                <img src="bahan/dream.jpg" alt="Poster DLC" class="game-img">
+            </td>
+
+            <td class="game-desc-cell">
+                <h3>Berani Menghadapi Kedalaman Kerajaan yang Terlupakan</h3>
+                <p>
+                    <strong>Dream</strong> memperluas dunia Hallownest melalui kekuatan <em>Dream Nail</em>, 
+                    memungkinkan Sang Ksatria memasuki mimpi, kenangan, dan batin makhluk-makhluk yang ditemui. 
+                    Dalam perjalanan ini Anda akan menjelajahi wilayah etereal dan menghadapi versi mimpi dari bos—yang jauh lebih kuat dan penuh teka-teki.
+                </p>
+                <p>
+                    DLC ini menambahkan area rahasia, bos unik, serta mekanik pengumpulan <em>Essence</em> yang membuka potongan lore paling dalam dan emosional tentang Hallownest. 
+                    Pengalaman menjadi lebih misterius, melankolis, dan penuh tantangan.
+                </p>
+                <ul>
+                    <li>Masuk ke dunia mimpi menggunakan Dream Nail</li>
+                    <li>Pertarungan bos versi mimpi yang menantang</li>
+                    <li>Area rahasia dan lore tambahan untuk menggali cerita</li>
+                </ul>
+                <p><em>Tip:</em> Galang Essence untuk mengungkap rahasia dan meningkatkan pemahaman tentang masa lalu Hallownest.</p>
+            </td>
+
+        </tr>
+    </table>
+</section>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const text = document.querySelector(".music-toggle");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            text.textContent = "⏸ Soundtrack";
+        } else {
+            music.pause();
+            text.textContent = " ▶ Soundtrack";
+        }
+    }
+
+</script>
+
+
+<a href="laman_utama.html" class="top-logo">
+        <img src="bahan/back.png" alt="Hollow Knight Logo">
+    </a>
+
+</body>
+</html>

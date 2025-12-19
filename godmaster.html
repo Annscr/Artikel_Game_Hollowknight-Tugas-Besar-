@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLC Page</title>
+
+<style>
+    .top-logo {
+    position: absolute;
+    bottom: 5px;
+    right: 25px;     
+    z-index: 5;
+    }
+
+    .top-logo img {
+    width: 110px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-image: url('bahan/godmaster_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    }
+    body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+    section {
+        width: 90%;
+        max-width: 1100px;
+        margin: 40px auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .game-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .game-img-cell {
+        width: 40%;
+        padding-right: 10px;
+    }
+    .game-desc-cell {
+        width: 60%;
+        padding-left: 10px;
+    }
+
+    .game-img {
+        width: 85%;
+        border-radius: 12px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    a {
+        color: #94b9ff;
+    }
+
+        .music-toggle {
+    text-decoration: underline;
+    cursor: pointer;
+    color: e5e5e5;
+    font-size: 16px;
+}
+</style>
+
+</head>
+<body>
+
+<section>
+    <h2>DLC GODMASTER</h2>
+
+        <div style="margin-top: 20px; text-align: center;">
+        <span class="music-toggle" onclick="toggleMusic()">▶ Soundtrack</span>
+        <audio id="bgMusic">
+            <source src="bahan/musik/God.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <table class="game-table">
+        <tr>
+            <td class="game-img-cell">
+                <img src="bahan/godmaster.jpg" alt="Poster DLC" class="game-img">
+            </td>
+
+<td class="game-desc-cell">
+  <h3>Ujian Para Dewa — DLC: Godmaster</h3>
+
+  <p>
+    <strong>Godmaster</strong> adalah DLC yang menghadirkan tantangan paling brutal dalam Hollow Knight.  
+    Melalui akses ke <em>Godhome</em>, Sang Ksatria dapat menghadapi para dewa dan prajurit terkuat Hallownest dalam serangkaian
+    arena pertempuran yang disebut <strong>Pantheon</strong>.
+  </p>
+
+  <p>
+    Setiap Pantheon berisi rangkaian bos yang harus dikalahkan tanpa henti, beberapa di antaranya memiliki versi baru,
+    lebih cepat, dan jauh lebih mematikan. Finalnya, <strong>Absolute Radiance</strong>, dianggap sebagai salah satu bos tersulit
+    dalam genre metroidvania modern.
+  </p>
+
+  <ul>
+    <li>Lima Pantheon dengan tingkat kesulitan meningkat</li>
+    <li>Versi baru dan lebih kuat dari banyak bos utama</li>
+    <li>Akses ke area eksklusif bernama Godhome</li>
+  </ul>
+
+  <p><em>Tip:</em> Siapkan amuleh terbaikmu—DLC ini menguji konsistensi, refleks, dan pemahaman mendalam tentang semua pola serangan bos.</p>
+</td>
+
+
+        </tr>
+    </table>
+</section>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const text = document.querySelector(".music-toggle");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            text.textContent = "⏸ Soundtrack";
+        } else {
+            music.pause();
+            text.textContent = " ▶ Soundtrack";
+        }
+    }
+
+</script>
+
+<a href="laman_utama.html" class="top-logo">
+        <img src="bahan/back.png" alt="Hollow Knight Logo">
+    </a>
+
+</body>
+</html>

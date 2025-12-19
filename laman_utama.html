@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artikel Hollow Knight</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="https://www.teamcherry.com.au/" class="top-logo">
+        <img src="bahan/logo.png" alt="Hollow Knight Logo">
+  </a>
+    <div class="title">
+      <img src="bahan/judul.png" alt="Hollow Knight Title" class="title-img">
+    </div>
+  </header>
+
+  <nav class="main-nav">
+  <ul>
+    <li>
+      <button id="toggleMusic" class="music-btn">▶ Soundtrack</button>
+    </li>
+    <li><a href="#tentang">Tentang</a></li>
+    <li><a href="#dlc">DLC</a></li>
+    <li><a href="#komentar">Komentar</a></li>
+  </ul>
+
+  <audio id="bgMusic" loop>
+    <source src="bahan/musik/hollow.mp3" type="audio/mp3">
+    Browser Anda tidak mendukung audio.
+  </audio>
+</nav>
+
+
+  <section id="tentang">
+    <h2>Pergi Ke Dunia Bawah</h2>
+
+    <table class="game-table">
+      <tr>
+        <td class="game-img-cell">
+          <img src="bahan/suasana1.jpg" alt="kota" class="game-img">
+        </td>
+        <td class="game-desc-cell">
+          <h3>Berani Menghadapi Kedalaman Kerajaan yang Terlupakan</h3>
+          <p>
+            Di bawah kota Dirtmouth yang memudar, tersimpan kerajaan kuno yang luas. Banyak yang tertarik ke bawah permukaan,
+            mencari kekayaan, kejayaan, atau jawaban atas rahasia-rahasia lama.
+          </p>
+          <p>
+            Sebagai Ksatria yang penuh teka-teki, Anda akan menjelajahi kedalamannya, mengungkap misterinya dan menaklukkan
+            kejahatannya.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="game-desc-cell">
+          <h3>Gunakan Keterampilan dan Refleks Anda untuk Bertahan Hidup</h3>
+          <p>
+            Hollow Knight adalah game aksi-petualangan 2D yang menantang. Anda akan menjelajahi gua-gua yang berliku-liku,
+            melawan makhluk-makhluk terkutuk, dan lolos dari jebakan rumit, semuanya untuk memecahkan misteri kuno yang telah
+            lama tersembunyi.
+          </p>
+          <ul>
+            <li>Jelajahi dunia yang luas dan saling terhubung</li>
+            <li>Bertemu dengan kumpulan teman dan musuh yang aneh</li>
+            <li>Berkembang dengan keterampilan dan kemampuan baru yang hebat</li>
+          </ul>
+        </td>
+
+        <td class="game-img-cell">
+          <img src="bahan/suasana2.jpg" alt="petualangan" class="game-img">
+        </td>
+      </tr>
+
+            <tr>
+        <td class="game-img-cell">
+          <img src="bahan/suasana3.jpg" alt="Art" class="game-img">
+        </td>
+        <td class="game-desc-cell">
+          <h3>Seni Gambar Tangan yang Penuh Makna</h3>
+          <p>
+            Setiap sudut Hollow Knight dipenuhi dengan seni gambar tangan yang indah, menciptakan dunia yang hidup dan
+            memikat. Dari gua-gua gelap hingga kota-kota yang megah, setiap lokasi dirancang dengan detail yang luar biasa,
+            menghadirkan pengalaman visual yang tak terlupakan.
+          </p>
+          <p>
+            Setiap area baru yang akan Anda temukan memiliki keunikan dan keanehan yang indah,
+            dipenuhi dengan makhluk dan karakter baru untuk ditemukan. 
+            Dunia Hollow Knight adalah dunia yang layak dijelajahi hanya untuk menikmati pemandangan dan menemukan keajaiban baru yang tersembunyi di luar jalur utama.
+          </p>
+        </td>
+      </tr>
+
+    </table>
+  </section>
+
+  <div class="video-container">
+  <video controls class="gameplay-video">
+    <source src="bahan/video1.mp4" type="video/mp4">
+    Browser Anda tidak mendukung video.
+  </video>
+    </div>
+
+ <section class="dlc-section" aria-label="DLC Links" id="dlc">
+    <h2>Jelajahi DLC</h2>
+    <table class="dlc-table" role="presentation">
+      <tr>
+        <td class="dlc-cell">
+          <a class="dlc-link" href="dream.html" target="_blank" rel="noopener noreferrer">
+            <div class="dlc-title">Dream</div>
+            <img src="bahan/dream.jpg" alt="Dream DLC" class="dlc-thumb">
+            <div class="dlc-caption">Menjelajahi mimpi dan rahasia terdalam Hallownest.</div>
+          </a>
+        </td>
+
+        <td class="dlc-cell">
+          <a class="dlc-link" href="grimtroup.html" target="_blank" rel="noopener noreferrer">
+            <div class="dlc-title">Grim Troupe</div>
+            <img src="bahan/grimtroupe.jpg" alt="Grim Troupe DLC" class="dlc-thumb">
+            <div class="dlc-caption">Tantangan baru dan musuh yang lebih ganas menanti.</div>
+          </a>
+        </td>
+
+        <td class="dlc-cell">
+          <a class="dlc-link" href="godmaster.html" target="_blank" rel="noopener noreferrer">
+            <div class="dlc-title">Godmaster</div>
+            <img src="bahan/godmaster.jpg" alt="Godmaster DLC" class="dlc-thumb">
+            <div class="dlc-caption">Uji kemampuanmu dalam serangkaian pertarungan bos epik.</div>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="comment-section" >
+  <h2>Tulis Komentar Kamu</h2>
+
+  <form id="commentForm">
+    <input type="text" id="name" placeholder="Nama" required>
+    <textarea id="comment" placeholder="Tulis komentar atau saran..." required></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+
+  <div id="commentList">
+    <h3>Komentar</h3>
+  </div>
+</section>
+
+
+  <footer>
+    Web ini hanya untuk project UAS semata
+  </footer>
+
+  <button id="toTop">↑</button>
+  <script src="script.js"></script>
+
+</body>
+</html>
