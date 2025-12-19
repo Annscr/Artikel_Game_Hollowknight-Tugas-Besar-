@@ -19,13 +19,13 @@ Fitur Website
 - Form komentar sederhana
 - Tombol navigasi kembali ke atas halaman
 
-## 🛠️ Bahasa Pemrograman yang Digunakan
+Bahasa Pemrograman yang Digunakan
 - HTML
 - CSS
 - JavaScript
 - GitHub Pages
 
-## 📎 Catatan
+Catatan
 - Website ini dibuat untuk **keperluan akademik**
 - Seluruh aset gambar dan video digunakan sebagai media pembelajaran
 
